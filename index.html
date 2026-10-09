@@ -5,49 +5,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="แนะนำตัวและโปรไฟล์ส่วนตัว - วิเคราะห์ทักษะ บุคลิกภาพ ความเชี่ยวชาญด้านเทคโนโลยี และแนวทางการทำงาน">
-  <title>About Me | แนะนำตัว & ข้อมูลโปรไฟล์ส่วนตัว</title>
+    content="Personal Profile & Interactive Persona Dashboard - นักพัฒนาซอฟต์แวร์สายวิเคราะห์ Maker และผู้รักความคุ้มค่า">
+  <title>About Me | Interactive Persona & Engineering Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Ambient background glow -->
-  <div class="glow-sphere glow-1"></div>
-  <div class="glow-sphere glow-2"></div>
-  <div class="glow-sphere glow-3"></div>
+  <!-- Ambient High-Tech Glow Grids -->
+  <div class="cyber-grid-overlay"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
 
-  <!-- Header / Navigation -->
-  <header class="site-header" id="header">
+  <!-- SITE HEADER / HUD BAR -->
+  <header class="hud-header" id="header">
     <div class="container header-container">
-      <a href="#hero" class="brand-logo" id="logo-link">
-        <div class="logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
+      <a href="#hero" class="brand-hud" id="logo-link">
+        <div class="brand-chip">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
         </div>
-        <span class="logo-text">MyPresent<span>.Me</span></span>
+        <div class="brand-meta">
+          <span class="brand-title">MYPRESENT<span>.ME</span></span>
+          <span class="brand-sub">ENGINEER & MAKER HUD</span>
+        </div>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#overview" class="nav-link">ภาพรวม</a>
-        <a href="#dimensions" class="nav-link">มิติชีวิต & ทักษะ</a>
-        <a href="#behavior" class="nav-link">วิเคราะห์นิสัย</a>
-        <a href="#strengths" class="nav-link">จุดแข็ง & เติบโต</a>
-        <a href="#scripts" class="nav-link">บทแนะนำตัว</a>
-        <a href="#ai-prompt" class="nav-link">AI Profile Export</a>
+      <nav class="nav-links" id="nav-menu">
+        <a href="#hero" class="nav-item active"><span class="nav-dot"></span>ภาพรวม</a>
+        <a href="#dimensions" class="nav-item"><span class="nav-dot"></span>Tech & Maker Lab</a>
+        <a href="#behavior" class="nav-item"><span class="nav-dot"></span>Behavioral DNA</a>
+        <a href="#decision-matrix" class="nav-item"><span class="nav-dot"></span>3-Criteria Engine</a>
+        <a href="#scripts" class="nav-item"><span class="nav-dot"></span>Intro Cards</a>
+        <a href="#ai-prompt" class="nav-item"><span class="nav-dot"></span>AI System Export</a>
       </nav>
 
-      <div class="header-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="สลับธีม สว่าง/มืด" title="สลับโหมดสี">
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="header-controls">
+        <div class="sys-badge">
+          <span class="live-beacon"></span>
+          <span class="sys-text">SYS ONLINE</span>
+        </div>
+
+        <button id="theme-toggle" class="control-btn" aria-label="สลับโหมดสี" title="สลับโหมดสี Dark / Light">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -58,394 +65,836 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <button id="print-btn" class="btn btn-outline btn-sm" onclick="window.print()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button id="print-btn" class="btn btn-hud-outline" onclick="window.print()" title="พิมพ์หรือบันทึกเป็น PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
             <rect x="6" y="14" width="12" height="8"></rect>
           </svg>
-          <span>พิมพ์ / บันทึก PDF</span>
+          <span>PDF / Print</span>
         </button>
 
         <button id="mobile-toggle" class="mobile-toggle" aria-label="เปิดเมนู">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-section">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="badge-chip">
-            <span class="badge-dot"></span>
-            Software Developer • Tech Analyst • Maker & DIY
-          </div>
-
-          <h1 class="hero-title">
-            สวัสดีครับ ผมคือคนสายวิเคราะห์<br>
-            <span class="text-gradient">เน้นแก้ปัญหาจริง และใช้เหตุผลเป็นหลัก</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            ชอบเทคโนโลยีและการลงมือทำ ตั้งแต่การเขียนโค้ดระบบธุรกิจ (Vue, .NET, SAP) งานฮาร์ดแวร์ DIY และพิมพ์ 3 มิติ
-            ไปจนถึงการบริหารจัดการชีวิตครอบครัวบนความคุ้มค่าและมีประสิทธิภาพสูงสุด
-          </p>
-
-          <!-- Core Quote Box -->
-          <div class="hero-quote-card">
-            <div class="quote-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-            </div>
-            <div class="quote-content">
-              <div class="quote-tag">สรุปตัวตนใน 1 ประโยค</div>
-              <div class="quote-text">
-                "เป็นคนสายวิเคราะห์ที่ชอบเทคโนโลยี เน้นการแก้ปัญหาจริง ให้ความสำคัญกับความคุ้มค่า
-                และพยายามดูแลทั้งงานและครอบครัวให้ดีที่สุด"
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Action Buttons -->
-          <div class="hero-cta-group">
-            <a href="#scripts" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <span>คัดลอกบทแนะนำตัว</span>
-            </a>
-            <a href="#behavior" class="btn btn-glass">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <span>ดูผลวิเคราะห์นิสัย</span>
-            </a>
-            <a href="#ai-prompt" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
-              </svg>
-              <span>AI System Prompt</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Tech & Persona Radar Card -->
-        <div class="hero-visual">
-          <div class="persona-dashboard-card">
-            <div class="card-glow"></div>
-            <div class="dash-header">
-              <div class="dash-avatar">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div class="dash-titles">
-                <div class="dash-name">Developer & Analyst</div>
-                <div class="dash-status">
-                  <span class="pulse-indicator"></span> พร้อมรับความท้าทาย & เรียนรู้ตลอดเวลา
-                </div>
-              </div>
-            </div>
-
-            <div class="persona-radar-bars">
-              <div class="trait-stat-item">
-                <div class="stat-labels">
-                  <span>การวิเคราะห์ข้อมูล & เหตุผล</span>
-                  <span class="stat-val">95%</span>
-                </div>
-                <div class="stat-bar-track">
-                  <div class="stat-bar-fill" style="width: 95%;"></div>
-                </div>
-              </div>
-
-              <div class="trait-stat-item">
-                <div class="stat-labels">
-                  <span>มุ่งเน้นการแก้ปัญหาจริง (Hands-on)</span>
-                  <span class="stat-val">92%</span>
-                </div>
-                <div class="stat-bar-track">
-                  <div class="stat-bar-fill" style="width: 92%;"></div>
-                </div>
-              </div>
-
-              <div class="trait-stat-item">
-                <div class="stat-labels">
-                  <span>คำนึงถึงความคุ้มค่า & ความยั่งยืน</span>
-                  <span class="stat-val">90%</span>
-                </div>
-                <div class="stat-bar-track">
-                  <div class="stat-bar-fill" style="width: 90%;"></div>
-                </div>
-              </div>
-
-              <div class="trait-stat-item">
-                <div class="stat-labels">
-                  <span>ความรับผิดชอบและดูแลครอบครัว</span>
-                  <span class="stat-val">96%</span>
-                </div>
-                <div class="stat-bar-track">
-                  <div class="stat-bar-fill" style="width: 96%;"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tech Badges Cloud -->
-            <div class="tech-pills-cloud">
-              <span class="tech-pill">Vue / Nuxt</span>
-              <span class="tech-pill">C# .NET</span>
-              <span class="tech-pill">SQL Server / MySQL</span>
-              <span class="tech-pill">SAP Integration</span>
-              <span class="tech-pill">REST APIs</span>
-              <span class="tech-pill">AI & Automation</span>
-              <span class="tech-pill">3D Printing</span>
-              <span class="tech-pill">EV & Battery DIY</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: 4 DIMENSIONS OF PROFILE -->
-    <section id="dimensions" class="section">
+    <!-- HERO BENTO DASHBOARD -->
+    <section id="hero" class="hero-bento-section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-tag">1. ประวัติย่อและ 4 มิติสำคัญ</div>
-          <h2 class="section-title">รอบรู้ทั้งงานระบบ เทคโนโลยี และการใช้ชีวิต</h2>
-          <p class="section-desc">การผสมผสานระหว่างมุมมองของนักพัฒนาซอฟต์แวร์ ผู้หลงใหลในฮาร์ดแวร์
-            และหัวหน้าครอบครัวที่มีวินัย</p>
-        </div>
-
-        <div class="grid-4-cards">
-          <!-- Card 1 -->
-          <div class="dimension-card">
-            <div class="card-icon-box blue-theme">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <h3 class="card-title">ด้านอาชีพและทักษะ</h3>
-            <p class="card-subtitle">Software & Business Systems</p>
-            <ul class="dimension-list">
-              <li><strong>Frontend:</strong> เชี่ยวชาญ Vue.js / Nuxt ในการทำ Web Application สมัยใหม่</li>
-              <li><strong>Backend:</strong> C# .NET พัฒนา Service และ APIs ที่เสถียรและรองรับงานหนัก</li>
-              <li><strong>Database:</strong> SQL Server และ MySQL ออกแบบ จัดการ และ Optimize ข้อมูล</li>
-              <li><strong>Enterprise Systems:</strong> เข้าใจกระบวนการธุรกิจ และเชื่อมต่อกับระบบ SAP</li>
-              <li><strong>Problem Solving:</strong> วิเคราะห์หาสาเหตุของปัญหาทางเทคนิคได้อย่างตรงจุด</li>
-            </ul>
+        <!-- Top Status Bar -->
+        <div class="bento-topbar">
+          <div class="status-indicator-pill">
+            <span class="pulsing-green-dot"></span>
+            <span class="mono-font">STATUS: ACTIVE &bull; RATIONAL PROBLEM SOLVER</span>
           </div>
-
-          <!-- Card 2 -->
-          <div class="dimension-card">
-            <div class="card-icon-box purple-theme">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="card-title">ด้านความสนใจ & Maker</h3>
-            <p class="card-subtitle">Tech, AI & Hardware DIY</p>
-            <ul class="dimension-list">
-              <li><strong>AI & คอมพิวเตอร์:</strong> ติดตามและนำ Generative AI มาช่วยทุ่นแรงในการทำงาน</li>
-              <li><strong>รถยนต์ไฟฟ้า (EV):</strong> สนใจเทคโนโลยีพลังงานสะอาดและโครงสร้างระบบขับเคลื่อน</li>
-              <li><strong>Battery Pack DIY:</strong> ศึกษาและประกอบชุดแบตเตอรี่ด้วยตนเอง เข้าใจระบบ BMS</li>
-              <li><strong>3D Printing:</strong> ออกแบบและพิมพ์ชิ้นงาน 3 มิติ สำหรับใช้จริงในชีวิตประจำวัน</li>
-              <li><strong>Analytical Buyer:</strong> เปรียบเทียบสเปกและรายละเอียดเชิงลึกก่อนตัดสินใจซื้อ</li>
-            </ul>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="dimension-card">
-            <div class="card-icon-box green-theme">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
-            </div>
-            <h3 class="card-title">ด้านชีวิตประจำวัน</h3>
-            <p class="card-subtitle">Family & Practical Living</p>
-            <ul class="dimension-list">
-              <li><strong>Family First:</strong> ให้ความสำคัญอันดับหนึ่งกับความสุขและความปลอดภัยของลูกและครอบครัว</li>
-              <li><strong>Smart Home Management:</strong> จัดการบ้านและระบบความปลอดภัยอย่างมีระเบียบ</li>
-              <li><strong>Cost-Saving Mindset:</strong> คำนวณความคุ้มค่าและลดค่าใช้จ่ายแฝงที่ไม่จำเป็น</li>
-              <li><strong>Fit-for-Purpose:</strong> เลือกซื้อสิ่งของที่ตอบโจทย์การใช้งานจริงมากกว่าค่านิยม</li>
-              <li><strong>Preventive Maintenance:</strong> ให้ความสำคัญกับการป้องกันปัญหาก่อนเกิดเหตุ</li>
-            </ul>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="dimension-card highlight-card">
-            <div class="card-icon-box orange-theme">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="22" y1="12" x2="18" y2="12"></line>
-                <line x1="6" y1="12" x2="2" y2="12"></line>
-                <line x1="12" y1="6" x2="12" y2="2"></line>
-                <line x1="12" y1="22" x2="12" y2="18"></line>
-              </svg>
-            </div>
-            <h3 class="card-title">เป้าหมายโดยรวม</h3>
-            <p class="card-subtitle">Guiding Principles</p>
-            <ul class="dimension-list">
-              <li><strong>เพิ่มประสิทธิภาพงาน:</strong> ปรับปรุงกระบวนการให้ทำงานได้ไวและผิดพลาดน้อยที่สุด</li>
-              <li><strong>ตัดสินใจด้วยเหตุผล:</strong> ใช้ข้อมูลและข้อเท็จจริงนำทางเสมอ ไม่ใช้อารมณ์ตัดสิน</li>
-              <li><strong>ใช้เงินคุ้มค่า:</strong> มองผลตอบแทนระยะยาวและ Total Cost of Ownership (TCO)</li>
-              <li><strong>ผลลัพธ์ที่ดีที่สุด:</strong> ดึงศักยภาพสูงสุดออกมาได้ภายใต้ข้อจำกัดและทรัพยากรที่มี</li>
-              <li><strong>พัฒนาทักษะไม่หยุด:</strong> ต่อยอดความรู้ใหม่ๆ ให้ทันต่อโลกเทคโนโลยีที่เปลี่ยนแปลง</li>
-            </ul>
+          <div class="location-badge mono-font">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="live-time-display">BANGKOK (UTC+7)</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- SECTION 2: BEHAVIORAL & PERSONALITY ANALYSIS -->
-    <section id="behavior" class="section bg-subtle">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">2. วิเคราะห์พฤติกรรมและลักษณะนิสัย</div>
-          <h2 class="section-title">5 บุคลิกภาพเด่นที่สะท้อนผ่านการกระทำ</h2>
-          <p class="section-desc">ถอดรหัสจากพฤติกรรมการตัดสินใจ การตั้งคำถาม และวิธีแก้ปัญหาในชีวิตจริง</p>
-        </div>
-
-        <div class="traits-container">
-          <!-- Trait 1 -->
-          <div class="trait-card">
-            <div class="trait-num">01</div>
-            <div class="trait-body">
-              <div class="trait-title-row">
-                <h3 class="trait-title">เป็นคนชอบวิเคราะห์และหาข้อมูล</h3>
-                <span class="trait-badge badge-blue">Data-Driven Decision</span>
-              </div>
-              <p class="trait-text">
-                ไม่เคยหยุดอยู่แค่คำตอบแรก แต่มักถามต่อถึงเหตุผลเบื้องหลัง ข้อแตกต่าง ข้อดี-ข้อเสีย
-                และรายละเอียดที่นำไปประยุกต์ใช้งานได้จริง เช่น การเปรียบเทียบอุปกรณ์ หรือการค้นหาสาเหตุที่แท้จริง (Root
-                Cause) ของปัญหาในระบบ
-              </p>
-              <div class="trait-strength">
-                <div class="strength-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+          <!-- Bento 1: Hologram Persona ID Card -->
+          <div class="bento-card bento-id-card">
+            <div class="card-glass-shine"></div>
+            <div class="id-card-top">
+              <div class="id-avatar-frame">
+                <div class="id-avatar-glow"></div>
+                <div class="id-avatar-inner">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M6 21v-2a6 6 0 0 1 12 0v2"></path>
                   </svg>
                 </div>
-                <span><strong>จุดแข็งสำคัญ:</strong> ตัดสินใจบนหลักฐานและข้อมูลที่ชัดเจน
-                  ลดความเสี่ยงจากการพึ่งพาความรู้สึกเพียงอย่างเดียว</span>
+                <span class="verified-sparkle" title="Verified Practical Maker">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </span>
               </div>
+              <div class="id-details">
+                <div class="role-tag mono-font">SOFTWARE & SYSTEM ENGINEER</div>
+                <h1 class="id-name">นักพัฒนาสายวิเคราะห์ & Maker</h1>
+                <div class="id-sub">Data-Driven &bull; Hands-on &bull; Family-First</div>
+              </div>
+            </div>
+
+            <!-- Visual Specs Meter Mini-deck -->
+            <div class="id-specs-grid">
+              <div class="spec-cell">
+                <div class="spec-label">CORE LOGIC</div>
+                <div class="spec-value text-cyan">วิเคราะห์เชิงระบบ</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">APPROACH</div>
+                <div class="spec-value text-emerald">เน้นผลลัพธ์จริง</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">FINANCE MINDSET</div>
+                <div class="spec-value text-amber">คุ้มค่าระยะยาว (TCO)</div>
+              </div>
+              <div class="spec-cell">
+                <div class="spec-label">MAKER FOCUS</div>
+                <div class="spec-value text-purple">3D Print & BMS Battery</div>
+              </div>
+            </div>
+
+            <div class="id-card-footer">
+              <div class="tech-inline-pills">
+                <span class="tech-tag tag-vue">Vue/Nuxt</span>
+                <span class="tech-tag tag-dotnet">C# .NET</span>
+                <span class="tech-tag tag-sql">SQL / MySQL</span>
+                <span class="tech-tag tag-sap">SAP System</span>
+                <span class="tech-tag tag-ai">AI Tools</span>
+                <span class="tech-tag tag-diy">EV & DIY</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: 1-Sentence Core Philosophy Card -->
+          <div class="bento-card bento-quote-card">
+            <div class="quote-watermark">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <div class="quote-badge mono-font">
+              <span class="spark-icon">&#10022;</span> สรุปตัวตนใน 1 ประโยค (CORE MANTRA)
+            </div>
+            <blockquote class="core-mantra-text">
+              &ldquo;เป็นคนสายวิเคราะห์ที่ชอบเทคโนโลยี <strong>เน้นการแก้ปัญหาจริง</strong> ให้ความสำคัญกับ<strong>ความคุ้มค่า</strong> และพยายามดูแลทั้งงานและครอบครัวให้ดีที่สุด&rdquo;
+            </blockquote>
+
+            <div class="mantra-metrics-row">
+              <div class="m-metric">
+                <div class="m-val text-cyan">100%</div>
+                <div class="m-lbl">ข้อมูลนำทาง (Data First)</div>
+              </div>
+              <div class="m-divider"></div>
+              <div class="m-metric">
+                <div class="m-val text-emerald">MAX</div>
+                <div class="m-lbl">ความคุ้มค่า (TCO)</div>
+              </div>
+              <div class="m-divider"></div>
+              <div class="m-metric">
+                <div class="m-val text-purple">TOP</div>
+                <div class="m-lbl">ความสุขครอบครัว</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Interactive Personality Radar Polygon -->
+          <div class="bento-card bento-radar-card">
+            <div class="card-header-flex">
+              <div>
+                <div class="card-pretitle mono-font">BEHAVIORAL DNA RADAR</div>
+                <h3 class="card-h3">แผนผังคุณลักษณะเด่น 5 ด้าน</h3>
+              </div>
+              <span class="interactive-hint mono-font">&bull; INTERACTIVE</span>
+            </div>
+
+            <!-- SVG Radar Visualizer -->
+            <div class="radar-container">
+              <svg class="radar-svg" viewBox="0 0 340 300" id="radar-chart">
+                <!-- Background Concentric Polygons -->
+                <polygon points="170,25 303,115 252,260 88,260 37,115" class="radar-grid-poly level-5" />
+                <polygon points="170,55 276,127 236,243 104,243 64,127" class="radar-grid-poly level-4" />
+                <polygon points="170,85 250,139 219,226 121,226 90,139" class="radar-grid-poly level-3" />
+                <polygon points="170,115 223,151 203,209 137,209 117,151" class="radar-grid-poly level-2" />
+
+                <!-- Axes -->
+                <line x1="170" y1="165" x2="170" y2="25" class="radar-axis" />
+                <line x1="170" y1="165" x2="303" y2="115" class="radar-axis" />
+                <line x1="170" y1="165" x2="252" y2="260" class="radar-axis" />
+                <line x1="170" y1="165" x2="88" y2="260" class="radar-axis" />
+                <line x1="170" y1="165" x2="37" y2="115" class="radar-axis" />
+
+                <!-- Data Polygon (Analytical:95%, Maker:92%, Value:90%, Family:96%, Structured:88%) -->
+                <polygon id="radar-data-polygon" points="170,32 292,119 244,251 92,251 49,121" class="radar-data-area" />
+
+                <!-- Data Points & Tooltip triggers -->
+                <circle cx="170" cy="32" r="5" class="radar-point" data-trait="วิเคราะห์และหาข้อมูล: 95%" />
+                <circle cx="292" cy="119" r="5" class="radar-point" data-trait="ชอบแก้ปัญหาและลงมือทำ: 92%" />
+                <circle cx="244" cy="251" r="5" class="radar-point" data-trait="ให้ความสำคัญกับความคุ้มค่า: 90%" />
+                <circle cx="92" cy="251" r="5" class="radar-point" data-trait="รับผิดชอบและดูแลครอบครัว: 96%" />
+                <circle cx="49" cy="121" r="5" class="radar-point" data-trait="สื่อสารเป็นขั้นตอน: 88%" />
+
+                <!-- Labels -->
+                <text x="170" y="16" class="radar-label" text-anchor="middle">1. ช่างวิเคราะห์ (95%)</text>
+                <text x="310" y="120" class="radar-label" text-anchor="start">2. แก้ปัญหาจริง (92%)</text>
+                <text x="260" y="280" class="radar-label" text-anchor="middle">3. ความคุ้มค่า (90%)</text>
+                <text x="80" y="280" class="radar-label" text-anchor="middle">5. ครอบครัว (96%)</text>
+                <text x="30" y="120" class="radar-label" text-anchor="end">4. เป็นขั้นตอน (88%)</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Bento 4: Quick Action HUD Terminal -->
+          <div class="bento-card bento-cta-card">
+            <div class="hud-mini-console">
+              <div class="terminal-dots">
+                <span class="t-red"></span><span class="t-yellow"></span><span class="t-green"></span>
+                <span class="t-label mono-font">QUICK_ACTIONS.EXE</span>
+              </div>
+              <div class="terminal-body mono-font">
+                <p>&gt; Target: Review Introduction &amp; Core Strengths</p>
+                <p>&gt; Mode: Practical &amp; Professional</p>
+              </div>
+            </div>
+
+            <div class="bento-cta-buttons">
+              <a href="#scripts" class="btn btn-hud-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>คัดลอกบทแนะนำตัว</span>
+              </a>
+
+              <a href="#decision-matrix" class="btn btn-hud-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>3-Criteria Decision Tool</span>
+              </a>
+
+              <a href="#ai-prompt" class="btn btn-hud-ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                <span>AI Prompt Export</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: TECH & MAKER WORKBENCH (VISUAL BENTO CARDS) -->
+    <section id="dimensions" class="hud-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="hud-badge mono-font">01 // CAPABILITIES &amp; LIFE DIMENSIONS</div>
+          <h2 class="section-headline">Tech Stack &bull; Maker Lab &bull; Life Principles</h2>
+          <p class="section-lead">ไม่ใช่แค่ตัวหนังสือ แต่คือชุดเครื่องมือและแนวทางที่ใช้งานจริงในทุกๆ วัน</p>
+        </div>
+
+        <div class="workbench-grid">
+          <!-- Workbench Card 1: Software & Business Systems -->
+          <div class="workbench-card card-software">
+            <div class="wb-header">
+              <div class="wb-icon bg-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="wb-category mono-font">ENTERPRISE &amp; DEV</span>
+                <h3 class="wb-title">ซอฟต์แวร์และระบบธุรกิจ</h3>
+              </div>
+            </div>
+
+            <div class="tech-stack-visual">
+              <!-- Visual Tech Block 1 -->
+              <div class="tech-block">
+                <div class="tb-top">
+                  <span class="tb-name">Vue.js / Nuxt</span>
+                  <span class="tb-stat-badge">Frontend Modern Web</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar cyan-bar" style="width: 92%;"></div>
+                </div>
+                <p class="tb-desc">พัฒนา Single Page Application, Business Dashboards และระบบที่ใช้งานง่าย รวดเร็ว</p>
+              </div>
+
+              <!-- Visual Tech Block 2 -->
+              <div class="tech-block">
+                <div class="tb-top">
+                  <span class="tb-name">C# .NET &amp; APIs</span>
+                  <span class="tb-stat-badge">Backend &amp; Services</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar indigo-bar" style="width: 90%;"></div>
+                </div>
+                <p class="tb-desc">สร้าง RESTful API, Microservices ที่เสถียร รองรับ Transaction และเชื่อมต่อระบบหลังบ้าน</p>
+              </div>
+
+              <!-- Visual Tech Block 3 -->
+              <div class="tech-block">
+                <div class="tb-top">
+                  <span class="tb-name">SQL Server &amp; MySQL</span>
+                  <span class="tb-stat-badge">Relational Database</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar purple-bar" style="width: 88%;"></div>
+                </div>
+                <p class="tb-desc">ออกแบบ Schema, Optimize Query และจัดการข้อมูลธุรกิจที่มีความซับซ้อน</p>
+              </div>
+
+              <!-- Visual Tech Block 4 -->
+              <div class="tech-block">
+                <div class="tb-top">
+                  <span class="tb-name">SAP ERP Integration</span>
+                  <span class="tb-stat-badge">Enterprise Workflow</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar emerald-bar" style="width: 85%;"></div>
+                </div>
+                <p class="tb-desc">เข้าใจ Business Logic ในระบบ ERP และเชื่อมโยงข้อมูลระหว่างระบบภายนอกกับ SAP</p>
+              </div>
+            </div>
+
+            <div class="wb-badge-strip">
+              <span class="spec-chip">&bull; Root-Cause Analysis</span>
+              <span class="spec-chip">&bull; API Architecture</span>
+              <span class="spec-chip">&bull; System Reliability</span>
+            </div>
+          </div>
+
+          <!-- Workbench Card 2: Hardware & Maker Lab -->
+          <div class="workbench-card card-hardware">
+            <div class="wb-header">
+              <div class="wb-icon bg-purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <span class="wb-category mono-font">MAKER &amp; HARDWARE</span>
+                <h3 class="wb-title">ฮาร์ดแวร์ DIY, AI &amp; EV</h3>
+              </div>
+            </div>
+
+            <!-- Hardware Infographic Modules -->
+            <div class="hardware-gadgets-deck">
+              <!-- Module A: Battery DIY -->
+              <div class="gadget-item">
+                <div class="gadget-icon-box">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
+                    <line x1="22" y1="11" x2="22" y2="13"></line>
+                  </svg>
+                </div>
+                <div class="gadget-content">
+                  <div class="gadget-name">
+                    <strong>ประกอบ Battery Pack &amp; BMS</strong>
+                    <span class="pill-mini text-emerald">DIY Craft</span>
+                  </div>
+                  <p class="gadget-sub">ศึกษาคำนวณเซลล์แบตเตอรี่ ระบบ BMS จัดระเบียบสายไฟเพื่อความปลอดภัยสูงสุด</p>
+                </div>
+              </div>
+
+              <!-- Module B: 3D Printing -->
+              <div class="gadget-item">
+                <div class="gadget-icon-box">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="gadget-content">
+                  <div class="gadget-name">
+                    <strong>3D Printing &amp; Rapid Prototyping</strong>
+                    <span class="pill-mini text-purple">Maker</span>
+                  </div>
+                  <p class="gadget-sub">ออกแบบและพิมพ์ชิ้นงาน 3D สเปกแข็งแรงสำหรับใช้จริง ทดแทนอะไหล่และอุปกรณ์ในบ้าน</p>
+                </div>
+              </div>
+
+              <!-- Module C: EV & Tech Compare -->
+              <div class="gadget-item">
+                <div class="gadget-icon-box">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                    <circle cx="7" cy="18" r="2"></circle>
+                    <circle cx="17" cy="18" r="2"></circle>
+                    <path d="M5 11V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"></path>
+                  </svg>
+                </div>
+                <div class="gadget-content">
+                  <div class="gadget-name">
+                    <strong>ยานยนต์ไฟฟ้า (EV) &amp; AI Integration</strong>
+                    <span class="pill-mini text-cyan">Tech Explorer</span>
+                  </div>
+                  <p class="gadget-sub">ติดตามเทคโนโลยีแบตเตอรี่ รถ EV และดึง GenAI มาช่วยเพิ่มประสิทธิภาพในการแก้ปัญหา</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wb-badge-strip">
+              <span class="spec-chip">&bull; Analytical Buyer</span>
+              <span class="spec-chip">&bull; Deep Specs Comparison</span>
+              <span class="spec-chip">&bull; Hands-on Tinker</span>
+            </div>
+          </div>
+
+          <!-- Workbench Card 3: Family & Practical Living -->
+          <div class="workbench-card card-family">
+            <div class="wb-header">
+              <div class="wb-icon bg-emerald">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="wb-category mono-font">LIFE &amp; RESPONSIBILITY</span>
+                <h3 class="wb-title">ชีวิตประจำวัน &amp; ครอบครัว</h3>
+              </div>
+            </div>
+
+            <div class="family-visual-box">
+              <div class="family-stat-item">
+                <div class="stat-icon-circ text-emerald">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div class="stat-body">
+                  <span class="stat-title">Family First (ดูแลลูก &amp; ครอบครัว)</span>
+                  <span class="stat-desc">ความสุข ความปลอดภัย และอนาคตของคนในครอบครัวคือเป้าหมายสำคัญสูงสุด</span>
+                </div>
+              </div>
+
+              <div class="family-stat-item">
+                <div class="stat-icon-circ text-cyan">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="stat-body">
+                  <span class="stat-title">Smart Home &amp; Preventive Safety</span>
+                  <span class="stat-desc">ดูแลจัดการระบบไฟฟ้า อุปกรณ์ในบ้าน และรถยนต์เพื่อป้องกันปัญหาก่อนเกิดเหตุ</span>
+                </div>
+              </div>
+
+              <div class="family-stat-item">
+                <div class="stat-icon-circ text-amber">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div class="stat-body">
+                  <span class="stat-title">Fit-for-Purpose Spending</span>
+                  <span class="stat-desc">เลือกซื้อสิ่งของที่ตอบโจทย์การใช้งานจริง ลดรายจ่ายแฝง มองความคุ้มค่าตลอดอายุใช้งาน</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wb-badge-strip">
+              <span class="spec-chip">&bull; Reliable Father</span>
+              <span class="spec-chip">&bull; Disciplined Budgeting</span>
+            </div>
+          </div>
+
+          <!-- Workbench Card 4: Overarching Guiding Goals -->
+          <div class="workbench-card card-goals">
+            <div class="wb-header">
+              <div class="wb-icon bg-amber">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="22" y1="12" x2="18" y2="12"></line>
+                  <line x1="6" y1="12" x2="2" y2="12"></line>
+                  <line x1="12" y1="6" x2="12" y2="2"></line>
+                  <line x1="12" y1="22" x2="12" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <span class="wb-category mono-font">OPERATING CORE</span>
+                <h3 class="wb-title">เป้าหมาย &amp; ปรัชญาการดำเนินชีวิต</h3>
+              </div>
+            </div>
+
+            <div class="goals-interactive-list">
+              <div class="goal-pill-card">
+                <div class="goal-number mono-font">01</div>
+                <div>
+                  <strong>เพิ่มประสิทธิภาพการทำงาน (Efficiency First)</strong>
+                  <p>ขจัดขั้นตอนที่ซ้ำซ้อน นำ Automation และเครื่องมือมาช่วยให้ได้งานเร็วและแม่นยำ</p>
+                </div>
+              </div>
+
+              <div class="goal-pill-card">
+                <div class="goal-number mono-font">02</div>
+                <div>
+                  <strong>ตัดสินใจด้วยเหตุผลและข้อมูล (Rational Decision)</strong>
+                  <p>ไม่พึ่งพาอารมณ์หรือการคาดเดา ใช้ข้อเท็จจริงนำทางเพื่อลดข้อผิดพลาด</p>
+                </div>
+              </div>
+
+              <div class="goal-pill-card">
+                <div class="goal-number mono-font">03</div>
+                <div>
+                  <strong>สร้างผลลัพธ์ที่ดีที่สุดในข้อจำกัด (Optimization)</strong>
+                  <p>ดึงศักยภาพสูงสุดจากทรัพยากร เวลา และงบประมาณที่มีอยู่จริง</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="wb-badge-strip">
+              <span class="spec-chip">&bull; Continuous Improvement</span>
+              <span class="spec-chip">&bull; High Return on Investment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BEHAVIORAL DNA & SPECTRUM GAUGES -->
+    <section id="behavior" class="hud-section bg-subtle-hud">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="hud-badge mono-font">02 // BEHAVIORAL ANALYSIS &amp; COGNITIVE TRAITS</div>
+          <h2 class="section-headline">5 บุคลิกภาพเด่นเชิงลึก (Cognitive DNA)</h2>
+          <p class="section-lead">ถอดรหัสรูปแบบการคิด การตั้งคำถาม และวิธีจัดการปัญหาผ่าน Visual Spectrum Indicators</p>
+        </div>
+
+        <div class="traits-visual-grid">
+          <!-- Trait 1 -->
+          <div class="trait-bento-card">
+            <div class="t-bento-header">
+              <div class="t-badge mono-font">TRAIT_01 &bull; ANALYTICAL</div>
+              <div class="t-score mono-font text-cyan">95% DATA-DRIVEN</div>
+            </div>
+            <h3 class="t-name">ช่างวิเคราะห์และสืบค้นข้อมูลเชิงลึก</h3>
+            
+            <!-- Spectrum Visual Gauge -->
+            <div class="spectrum-box">
+              <div class="spectrum-labels mono-font">
+                <span>ความรู้สึก (Gut Feeling)</span>
+                <span class="text-cyan font-bold">ข้อมูลจริง (Data &amp; Logic)</span>
+              </div>
+              <div class="spectrum-bar">
+                <div class="spectrum-fill cyan-grad" style="width: 95%;"></div>
+                <div class="spectrum-pin" style="left: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="t-highlight-box">
+              <div class="th-bullet">&#10004;</div>
+              <div>
+                <strong>พฤติกรรมเด่น:</strong> ไม่หยุดที่คำตอบแรก มักถามต่อถึงเหตุผลเบื้องหลัง ข้อดี-ข้อเสีย และการประยุกต์ใช้งานจริง เช่น การเปรียบเทียบอุปกรณ์เชิงลึก
+              </div>
+            </div>
+            <div class="t-tag-footer">
+              <span class="trait-subtag text-cyan">จุดแข็ง: ลดความเสี่ยงจากการตัดสินใจผิดพลาด</span>
             </div>
           </div>
 
           <!-- Trait 2 -->
-          <div class="trait-card">
-            <div class="trait-num">02</div>
-            <div class="trait-body">
-              <div class="trait-title-row">
-                <h3 class="trait-title">ให้ความสำคัญกับความคุ้มค่า (Value Maximizer)</h3>
-                <span class="trait-badge badge-green">TCO Mindset</span>
+          <div class="trait-bento-card">
+            <div class="t-bento-header">
+              <div class="t-badge mono-font">TRAIT_02 &bull; VALUE_TCO</div>
+              <div class="t-score mono-font text-emerald">90% COST/VALUE</div>
+            </div>
+            <h3 class="t-name">ให้ความสำคัญกับความคุ้มค่า (TCO Mindset)</h3>
+
+            <!-- Spectrum Visual Gauge -->
+            <div class="spectrum-box">
+              <div class="spectrum-labels mono-font">
+                <span>เลือกที่ถูกที่สุด (Cheap)</span>
+                <span class="text-emerald font-bold">คุ้มค่าระยะยาว (TCO Maximizer)</span>
               </div>
-              <p class="trait-text">
-                ประเมินทั้งราคา คุณภาพ ความทนทาน ประสิทธิภาพการใช้งาน และค่าใช้จ่ายต่อเนื่องในระยะยาว
-                ไม่ได้เลือกสิ่งของเพียงเพราะราคาถูกที่สุด แต่ต้องการคำตอบว่า
-                "ตัวเลือกไหนคุ้มค่าที่สุดสำหรับการใช้งานจริง"
-              </p>
-              <div class="trait-strength">
-                <div class="strength-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span><strong>จุดแข็งสำคัญ:</strong> มีการวางแผนการเงินที่ดีเยี่ยมก่อนการลงทุนหรือซื้อของชิ้นใหญ่
-                  ไม่เสียเงินโดยเปล่าประโยชน์</span>
+              <div class="spectrum-bar">
+                <div class="spectrum-fill emerald-grad" style="width: 90%;"></div>
+                <div class="spectrum-pin" style="left: 90%;"></div>
               </div>
+            </div>
+
+            <div class="t-highlight-box">
+              <div class="th-bullet">&#10004;</div>
+              <div>
+                <strong>พฤติกรรมเด่น:</strong> ประเมินทั้งราคา คุณภาพ ความทนทาน และค่าใช้จ่ายต่อเนื่อง วางแผนละเอียดก่อนซื้อของชิ้นใหญ่เสมอ
+              </div>
+            </div>
+            <div class="t-tag-footer">
+              <span class="trait-subtag text-emerald">จุดแข็ง: ไม่เสียเงินกับสิ่งไร้ประโยชน์ มีวินัยการเงินสูง</span>
             </div>
           </div>
 
           <!-- Trait 3 -->
-          <div class="trait-card">
-            <div class="trait-num">03</div>
-            <div class="trait-body">
-              <div class="trait-title-row">
-                <h3 class="trait-title">เป็นคนชอบแก้ปัญหาและลงมือทำจริง</h3>
-                <span class="trait-badge badge-purple">Practical Maker</span>
+          <div class="trait-bento-card">
+            <div class="t-bento-header">
+              <div class="t-badge mono-font">TRAIT_03 &bull; HANDS_ON</div>
+              <div class="t-score mono-font text-purple">92% MAKER_EXEC</div>
+            </div>
+            <h3 class="t-name">ชอบแก้ปัญหาและลงมือทำจริง (Practical Maker)</h3>
+
+            <!-- Spectrum Visual Gauge -->
+            <div class="spectrum-box">
+              <div class="spectrum-labels mono-font">
+                <span>ทฤษฎีในตำรา (Theory)</span>
+                <span class="text-purple font-bold">ลงมือทดลองจริง (Hands-on Build)</span>
               </div>
-              <p class="trait-text">
-                มุ่งเน้นวิธีแก้ปัญหาที่นำไปใช้ได้จริง ไม่ติดอยู่แค่ทฤษฎี ตั้งแต่งานซอฟต์แวร์โค้ดดิ้ง ระบบไฟฟ้า
-                อุปกรณ์อัจฉริยะในบ้าน ไปจนถึงการซ่อมแซมและดัดแปลงของใช้ด้วยตนเอง
-                ชอบศึกษาเข้าใจกลไกภายในและหาทางออกด้วยตัวเอง
-              </p>
-              <div class="trait-strength">
-                <div class="strength-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span><strong>จุดแข็งสำคัญ:</strong> สามารถพึ่งพาตนเองได้สูง แก้ปัญหาเฉพาะหน้าได้รวดเร็ว
-                  และสร้างสรรค์สิ่งใหม่ได้ด้วยมือตนเอง</span>
+              <div class="spectrum-bar">
+                <div class="spectrum-fill purple-grad" style="width: 92%;"></div>
+                <div class="spectrum-pin" style="left: 92%;"></div>
               </div>
+            </div>
+
+            <div class="t-highlight-box">
+              <div class="th-bullet">&#10004;</div>
+              <div>
+                <strong>พฤติกรรมเด่น:</strong> ตั้งแต่เขียนโค้ด งานวงจรไฟฟ้า อุปกรณ์ในบ้าน ไปจนถึงงานดัดแปลง ชอบศึกษาเข้าใจกลไกภายในและซ่อม/สร้างด้วยตนเอง
+              </div>
+            </div>
+            <div class="t-tag-footer">
+              <span class="trait-subtag text-purple">จุดแข็ง: พึ่งพาตนเองได้สูง แก้ไขปัญหาหน้างานได้เฉียบขาด</span>
             </div>
           </div>
 
           <!-- Trait 4 -->
-          <div class="trait-card">
-            <div class="trait-num">04</div>
-            <div class="trait-body">
-              <div class="trait-title-row">
-                <h3 class="trait-title">สื่อสารตรงประเด็นและเรียนรู้เป็นขั้นตอน</h3>
-                <span class="trait-badge badge-orange">Structured Learner</span>
+          <div class="trait-bento-card">
+            <div class="t-bento-header">
+              <div class="t-badge mono-font">TRAIT_04 &bull; STRUCTURED</div>
+              <div class="t-score mono-font text-amber">88% STEP_BY_STEP</div>
+            </div>
+            <h3 class="t-name">สื่อสารตรงประเด็น &amp; เรียนรู้เป็นขั้นตอน</h3>
+
+            <!-- Spectrum Visual Gauge -->
+            <div class="spectrum-box">
+              <div class="spectrum-labels mono-font">
+                <span>อธิบายกว้างๆ (Broad)</span>
+                <span class="text-amber font-bold">เป็นลำดับขั้น (Step-by-Step)</span>
               </div>
-              <p class="trait-text">
-                มักถามสั้นกระชับ เป็นลำดับขั้น (Step-by-step)
-                และจะถามเจาะลึกเฉพาะจุดเมื่อพบประเด็นสำคัญที่ต้องการความกระจ่าง เหมาะกับการเรียนรู้แบบ Hands-on
-                ที่ลงมือทดลองจริงควบคู่กับการทำความเข้าใจทีละเฟส
-              </p>
-              <div class="trait-strength">
-                <div class="strength-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span><strong>จุดแข็งสำคัญ:</strong> สื่อสารกับทีมงานและผู้ร่วมงานได้มีประสิทธิภาพ ประหยัดเวลา
-                  และได้ข้อสรุปที่ชัดเจน</span>
+              <div class="spectrum-bar">
+                <div class="spectrum-fill amber-grad" style="width: 88%;"></div>
+                <div class="spectrum-pin" style="left: 88%;"></div>
               </div>
+            </div>
+
+            <div class="t-highlight-box">
+              <div class="th-bullet">&#10004;</div>
+              <div>
+                <strong>พฤติกรรมเด่น:</strong> มักถามคำถามสั้นกระชับ ถามเจาะลึกเฉพาะประเด็นที่ต้องการความชัดเจน เรียนรู้ได้ดีที่สุดจากการลงมือทำทีละเฟส
+              </div>
+            </div>
+            <div class="t-tag-footer">
+              <span class="trait-subtag text-amber">จุดแข็ง: สื่อสารในทีมได้กระชับ ตรงประเด็น ประหยัดเวลา</span>
             </div>
           </div>
 
           <!-- Trait 5 -->
-          <div class="trait-card">
-            <div class="trait-num">05</div>
-            <div class="trait-body">
-              <div class="trait-title-row">
-                <h3 class="trait-title">มีความรับผิดชอบสูงและใส่ใจคนรอบตัว</h3>
-                <span class="trait-badge badge-rose">Family & Safety Minded</span>
+          <div class="trait-bento-card span-2-desk">
+            <div class="t-bento-header">
+              <div class="t-badge mono-font">TRAIT_05 &bull; RESPONSIBILITY</div>
+              <div class="t-score mono-font text-rose">96% PROTECTOR</div>
+            </div>
+            <h3 class="t-name">มีความรับผิดชอบสูง &amp; ใส่ใจคนรอบตัว</h3>
+
+            <!-- Spectrum Visual Gauge -->
+            <div class="spectrum-box">
+              <div class="spectrum-labels mono-font">
+                <span>แก้ปัญหาเมื่อเกิดเหตุ (Reactive)</span>
+                <span class="text-rose font-bold">ป้องกันปัญหาล่วงหน้า (Proactive Defense)</span>
               </div>
-              <p class="trait-text">
-                สะท้อนผ่านความใส่ใจในรายละเอียดเรื่องความปลอดภัยในบ้าน การดูแลลูก การบำรุงรักษารถยนต์
-                และการจัดการความเป็นอยู่ของคนในครอบครัว มีจิตสำนึกในการป้องกันปัญหาล่วงหน้าเสมอ
+              <div class="spectrum-bar">
+                <div class="spectrum-fill rose-grad" style="width: 96%;"></div>
+                <div class="spectrum-pin" style="left: 96%;"></div>
+              </div>
+            </div>
+
+            <div class="t-highlight-box">
+              <div class="th-bullet">&#10004;</div>
+              <div>
+                <strong>พฤติกรรมเด่น:</strong> ใส่ใจในความปลอดภัยของครอบครัว ลูก รถยนต์ และสภาพบ้าน วางแผนดูแลรักษาอย่างเป็นระบบ ไม่ปล่อยให้เกิดความเสี่ยง
+              </div>
+            </div>
+            <div class="t-tag-footer">
+              <span class="trait-subtag text-rose">จุดแข็ง: เสาหลักที่ไว้วางใจได้ สร้างความอุ่นใจและมั่นคงให้กับทุกคนรอบข้าง</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 3-KEY CRITERIA DECISION MACHINE (INTERACTIVE FRAMEWORK) -->
+    <section id="decision-matrix" class="hud-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="hud-badge mono-font">03 // STRENGTHS &amp; GROWTH SIMULATOR</div>
+          <h2 class="section-headline">เครื่องมือแก้ Analysis Paralysis ด้วย "กฎเกณฑ์ 3 ข้อ"</h2>
+          <p class="section-lead">เปลี่ยนข้อควรระวังให้กลายเป็นระบบตัดสินใจที่เฉียบคมและทรงประสิทธิภาพ</p>
+        </div>
+
+        <div class="decision-machine-container">
+          <!-- Left: Strengths vs Watch-out Card -->
+          <div class="dm-card dm-analysis">
+            <div class="dm-header">
+              <span class="mono-font text-cyan">DIAGNOSTIC MATRIX</span>
+              <h4>จุดแข็ง &bull; สิ่งที่ต้องระวัง</h4>
+            </div>
+
+            <div class="matrix-pills-flow">
+              <div class="mp-item good">
+                <span class="mp-icon">&#10004;</span>
+                <div>
+                  <strong>จุดแข็งสำคัญ:</strong> ช่างสงสัย วิเคราะห์เป็นขั้นตอน และใส่ใจในรายละเอียดอย่างลึกซึ้ง
+                </div>
+              </div>
+
+              <div class="mp-item good">
+                <span class="mp-icon">&#10004;</span>
+                <div>
+                  <strong>สไตล์การทำงาน:</strong> มุ่งเน้นผลลัพธ์ที่ใช้งานได้จริง ไม่เสียเวลากับสิ่งที่ไม่จำเป็น
+                </div>
+              </div>
+
+              <div class="mp-item good">
+                <span class="mp-icon">&#10004;</span>
+                <div>
+                  <strong>การเงิน &amp; ลงทุน:</strong> พิจารณาความคุ้มค่ารอบด้าน ไม่ตกเป็นเหยื่อของการตลาด
+                </div>
+              </div>
+
+              <!-- Alert Box -->
+              <div class="mp-item alert-box">
+                <div class="alert-icon-ring">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-rose">สิ่งที่ควรระวัง (Analysis Paralysis):</strong>
+                  <p>การค้นหาและเปรียบเทียบข้อมูลหลายมิติ อาจทำให้ใช้เวลาตัดสินใจนานเกินจำเป็นในบางสถานการณ์</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive 3-Criteria Decision Tool -->
+          <div class="dm-card dm-simulator">
+            <div class="dm-header">
+              <span class="mono-font text-emerald">INTERACTIVE ACTION PLAN</span>
+              <h4>เครื่องจำลอง "กฎเกณฑ์ตัดสินใจหลัก 3 ข้อ"</h4>
+            </div>
+
+            <p class="dm-sim-guide">
+              เมื่อต้องตัดสินใจเรื่องสำคัญ ให้กำหนด <strong>เกณฑ์หลัก 3 ข้อ</strong> แล้วคลิกเพื่อทดสอบ เมื่อผ่านครบ 3 ข้อให้ตัดสินใจทันทีโดยไม่ต้องรอข้อมูล 100%!
+            </p>
+
+            <div class="interactive-checklist">
+              <label class="sim-check-item" id="check-item-1">
+                <input type="checkbox" id="crit-1" checked>
+                <div class="custom-checkbox"></div>
+                <div class="sim-text">
+                  <strong>เกณฑ์ที่ 1: ตอบโจทย์การใช้งานจริงหลัก (Fit-for-Purpose)</strong>
+                  <span>ตัวเลือกนี้แก้ปัญหาหลักที่ต้องการได้ครบถ้วนหรือไม่</span>
+                </div>
+              </label>
+
+              <label class="sim-check-item" id="check-item-2">
+                <input type="checkbox" id="crit-2" checked>
+                <div class="custom-checkbox"></div>
+                <div class="sim-text">
+                  <strong>เกณฑ์ที่ 2: ความคุ้มค่าระยะยาว (TCO &amp; Reliability)</strong>
+                  <span>ราคาและค่าบำรุงรักษาตลอดอายุการใช้งานสมเหตุสมผล</span>
+                </div>
+              </label>
+
+              <label class="sim-check-item" id="check-item-3">
+                <input type="checkbox" id="crit-3" checked>
+                <div class="custom-checkbox"></div>
+                <div class="sim-text">
+                  <strong>เกณฑ์ที่ 3: ความปลอดภัยและเสถียรภาพ (Safety &amp; Stability)</strong>
+                  <span>ไม่สร้างความเสี่ยงต่อระบบหรือครอบครัว</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Interactive Decision Output Panel -->
+            <div class="decision-output-hud" id="decision-hud">
+              <div class="hud-status-row">
+                <span class="mono-font">CRITERIA PASSED:</span>
+                <span class="mono-font text-emerald font-bold" id="passed-count">3 / 3</span>
+              </div>
+              <div class="hud-big-result text-emerald" id="decision-text">
+                &#9889; ตัดสินใจได้ทันที (EXECUTE NOW) &bull; ข้อมูลเพียงพอแล้ว
+              </div>
+              <div class="hud-sub-tip" id="decision-tip">
+                ไม่ต้องเปรียบเทียบข้อมูลยิบย่อยเพิ่ม เพื่อประหยัดเวลาและไม่พลาดโอกาสสำคัญ
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INTERACTIVE SELF-INTRO DECK -->
+    <section id="scripts" class="hud-section bg-subtle-hud">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="hud-badge mono-font">04 // SELF-INTRO TEMPLATES &amp; VOICE</div>
+          <h2 class="section-headline">บทแนะนำตัวเองตามบริบท (Ready-to-Use)</h2>
+          <p class="section-lead">เลือกรูปแบบที่ต้องการ แล้วคลิก <strong>"คัดลอกข้อความ"</strong> ไปใช้งานได้ทันที</p>
+        </div>
+
+        <!-- Interactive Format Switcher -->
+        <div class="intro-deck-wrapper">
+          <div class="intro-tab-chips">
+            <button class="deck-chip active" data-deck="casual">
+              <span class="chip-icon">&#128075;</span>
+              <span>1. แบบเป็นธรรมชาติ (เพื่อนใหม่ / ทั่วไป)</span>
+            </button>
+            <button class="deck-chip" data-deck="professional">
+              <span class="chip-icon">&#128188;</span>
+              <span>2. แบบมืออาชีพ (การทำงาน / LinkedIn)</span>
+            </button>
+            <button class="deck-chip" data-deck="personality">
+              <span class="chip-icon">&#129504;</span>
+              <span>3. แบบสะท้อนตัวตน (บุคลิกภาพเชิงลึก)</span>
+            </button>
+          </div>
+
+          <!-- The Presentation Card Stage -->
+          <div class="intro-stage-card">
+            <!-- Card Meta Header -->
+            <div class="stage-header">
+              <div class="stage-tag-group">
+                <span class="tag-status-pill text-cyan" id="deck-scenario-tag">สำหรับ: แนะนำตัวกับคนทั่วไป / เพื่อนใหม่</span>
+                <span class="tag-meta-pill mono-font" id="deck-readtime">อ่าน ~20 วินาที &bull; 45 คำ</span>
+              </div>
+              <button class="btn btn-hud-copy copy-deck-btn" id="deck-copy-btn">
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-text">คัดลอกข้อความ</span>
+              </button>
+            </div>
+
+            <!-- Waveform Sound Visualizer (Pure CSS/SVG Animation) -->
+            <div class="audio-wave-visualizer">
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <span class="wave-label mono-font">SPEECH_FLOW // NATURAL TONE</span>
+            </div>
+
+            <!-- Dynamic Quote / Script Display -->
+            <div class="stage-content-box">
+              <p class="stage-paragraph" id="deck-paragraph-display">
+                ผมเป็นคนที่สนใจเทคโนโลยีและการแก้ปัญหา ชอบเรียนรู้สิ่งใหม่ ๆ โดยเฉพาะด้านซอฟต์แวร์ คอมพิวเตอร์ และอุปกรณ์อิเล็กทรอนิกส์ เวลาตัดสินใจจะให้ความสำคัญกับข้อมูล ความคุ้มค่า และการใช้งานจริง นอกจากนี้ยังให้ความสำคัญกับครอบครัวและการพัฒนาตัวเองอยู่เสมอ
               </p>
-              <div class="trait-strength">
-                <div class="strength-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span><strong>จุดแข็งสำคัญ:</strong> เป็นเสาหลักที่ไว้ใจได้ มีความรอบคอบ
-                  และสร้างความมั่นคงปลอดภัยให้กับผู้คนรอบข้าง</span>
+            </div>
+
+            <!-- Context Footer -->
+            <div class="stage-footer">
+              <div class="stage-usecase" id="deck-usecase-display">
+                <strong>บริบทที่เหมาะสม:</strong> นำไปใช้ในช่อง About Me บนโซเชียลมีเดีย, การร่วมกิจกรรมกลุ่ม, หรือการพบปะพูดคุยทั่วไป
               </div>
             </div>
           </div>
@@ -453,380 +902,99 @@
       </div>
     </section>
 
-    <!-- SECTION 3: STRENGTHS & GROWTH MATRIX -->
-    <section id="strengths" class="section">
+    <!-- SECTION 5: AI CONTEXT & MULTI-PURPOSE EXPORTER HUD -->
+    <section id="ai-prompt" class="hud-section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-tag">3. จุดแข็งและแนวทางพัฒนา</div>
-          <h2 class="section-title">ตารางวิเคราะห์จุดแข็ง ข้อควรระวัง และแนวทางต่อยอด</h2>
-          <p class="section-desc">การรู้เท่าทันจุดแข็งและสิ่งที่อาจเป็นกับดัก
-            จะช่วยให้เราก้าวหน้าได้อย่างมีประสิทธิภาพสูงสุด</p>
+        <div class="section-title-wrap">
+          <div class="hud-badge mono-font">05 // PROFILE TARGETING &amp; AI EXPORT</div>
+          <h2 class="section-headline">เลือกรูปแบบการนำโปรไฟล์ไปประยุกต์ใช้</h2>
+          <p class="section-lead">แปลงโปรไฟล์นี้เป็น Prompt สำหรับใส่ AI, เรซูเม่สมัครงาน, หรือบทวิเคราะห์พัฒนาตนเอง</p>
         </div>
 
-        <div class="matrix-table-wrap">
-          <table class="matrix-table">
-            <thead>
-              <tr>
-                <th style="width: 28%;">มิติ / หัวข้อ</th>
-                <th style="width: 72%;">สิ่งที่สังเกตได้และข้อเท็จจริง</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator blue"></span>
-                    <strong>จุดแข็งหลัก (Key Strength)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  ช่างสงสัย วิเคราะห์ปัญหาอย่างเป็นขั้นตอน ใส่ใจในรายละเอียด และไม่ด่วนสรุปโดยไม่มีข้อมูลรองรับ
-                </td>
-              </tr>
-              <tr>
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator green"></span>
-                    <strong>การทำงาน (Work Ethic)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  มุ่งเน้นการแก้ปัญหาที่นำไปใช้งานได้จริง สร้างระบบที่ตอบโจทย์ธุรกิจ และปรับปรุงขั้นตอนให้คล่องตัว
-                </td>
-              </tr>
-              <tr>
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator purple"></span>
-                    <strong>การเงิน & การตัดสินใจ (Finance)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  พิจารณาความคุ้มค่า เปรียบเทียบทางเลือกอย่างรอบด้าน คำนึงถึงต้นทุนระยะยาวและความคุ้มประโยชน์
-                </td>
-              </tr>
-              <tr>
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator orange"></span>
-                    <strong>การเรียนรู้ (Learning Style)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  ชอบถามต่อ ทดลองสร้าง/ประกอบ และทำความเข้าใจกลไกด้วยตนเอง (Hands-on Experiential Learning)
-                </td>
-              </tr>
-              <tr class="row-warning">
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator warning"></span>
-                    <strong>สิ่งที่ควรระวัง (Watch-out)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  <div class="warning-alert">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path
-                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
-                      </path>
-                      <line x1="12" y1="9" x2="12" y2="13"></line>
-                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                    <div>
-                      <strong>Analysis Paralysis:</strong> การค้นหาและเปรียบเทียบข้อมูลหลายมิติ
-                      อาจทำให้ใช้เวลาตัดสินใจนานเกินความจำเป็นในบางสถานการณ์
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="row-solution">
-                <td class="col-topic">
-                  <div class="topic-box">
-                    <span class="dot-indicator success"></span>
-                    <strong>แนวทางพัฒนา (Action Plan)</strong>
-                  </div>
-                </td>
-                <td class="col-desc">
-                  <div class="solution-card">
-                    <div class="solution-badge">กฎเกณฑ์ 3 ข้อ (3-Key Criteria Rule)</div>
-                    <p class="solution-text">
-                      กำหนด <strong>"เกณฑ์ตัดสินใจหลัก 3 ข้อ"</strong> ให้ชัดเจนตั้งแต่เริ่มต้น
-                      เมื่อข้อมูลและตัวเลือกใดผ่านเกณฑ์ครบตามนี้ ให้ตัดสินใจเลือกทันทีโดยไม่ต้องรอให้ข้อมูลสมบูรณ์แบบ
-                      100% เพื่อความรวดเร็วและไม่เสียโอกาส
-                    </p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: SELF-INTRO TEMPLATES -->
-    <section id="scripts" class="section bg-subtle">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">4. ตัวอย่างบทแนะนำตัว</div>
-          <h2 class="section-title">พร้อมใช้งานในทุกโอกาสและบริบท</h2>
-          <p class="section-desc">คลิกปุ่ม <strong>"คัดลอก"</strong> เพื่อนำข้อความไปส่งในแชท อีเมล โปรไฟล์
-            หรือเรซูเม่ได้ทันที</p>
-        </div>
-
-        <!-- Script Tabs -->
-        <div class="script-tabs-wrapper">
-          <div class="script-tabs" role="tablist">
-            <button class="tab-btn active" data-tab="casual">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-              แบบสั้น กระชับ เป็นธรรมชาติ
-            </button>
-            <button class="tab-btn" data-tab="professional">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-              แบบมืออาชีพ สำหรับการทำงาน
-            </button>
-            <button class="tab-btn" data-tab="personality">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
-              </svg>
-              แบบสะท้อนตัวตนและบุคลิกภาพ
-            </button>
-          </div>
-        </div>
-
-        <!-- Script Panels -->
-        <div class="script-panels">
-          <!-- Panel 1: Casual -->
-          <div class="script-panel active" id="tab-casual">
-            <div class="script-card">
-              <div class="script-card-header">
-                <div class="script-meta">
-                  <span class="meta-pill blue">แนะนำตัวทั่วไป / พบเพื่อนใหม่</span>
-                  <span class="meta-read-time">อ่าน 20 วินาที</span>
-                </div>
-                <button class="btn btn-copy copy-btn" data-target="casual-text">
-                  <svg class="copy-default" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  <svg class="copy-success" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span class="copy-label">คัดลอกข้อความ</span>
-                </button>
-              </div>
-              <div class="script-body">
-                <p id="casual-text" class="script-paragraph">
-                  ผมเป็นคนที่สนใจเทคโนโลยีและการแก้ปัญหา ชอบเรียนรู้สิ่งใหม่ ๆ โดยเฉพาะด้านซอฟต์แวร์ คอมพิวเตอร์
-                  และอุปกรณ์อิเล็กทรอนิกส์ เวลาตัดสินใจจะให้ความสำคัญกับข้อมูล ความคุ้มค่า และการใช้งานจริง
-                  นอกจากนี้ยังให้ความสำคัญกับครอบครัวและการพัฒนาตัวเองอยู่เสมอ
-                </p>
-              </div>
-              <div class="script-footer">
-                <span class="use-case-label">เหมาะสำหรับ:</span> แนะนำตัวในการรวมกลุ่ม, ทำความรู้จักเพื่อนใหม่, ช่อง
-                About Me บนโซเชียลมีเดีย
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 2: Professional -->
-          <div class="script-panel" id="tab-professional">
-            <div class="script-card">
-              <div class="script-card-header">
-                <div class="script-meta">
-                  <span class="meta-pill purple">การทำงาน / สมัครงาน / LinkedIn</span>
-                  <span class="meta-read-time">อ่าน 25 วินาที</span>
-                </div>
-                <button class="btn btn-copy copy-btn" data-target="professional-text">
-                  <svg class="copy-default" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  <svg class="copy-success" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span class="copy-label">คัดลอกข้อความ</span>
-                </button>
-              </div>
-              <div class="script-body">
-                <p id="professional-text" class="script-paragraph">
-                  ผมทำงานด้านการพัฒนาซอฟต์แวร์และระบบธุรกิจ มีความสนใจด้านเทคโนโลยี การออกแบบระบบ
-                  และการแก้ไขปัญหาทางเทคนิค ผมให้ความสำคัญกับการวิเคราะห์ปัญหาอย่างเป็นระบบ การพัฒนาทักษะอย่างต่อเนื่อง
-                  และการนำเทคโนโลยีมาช่วยเพิ่มประสิทธิภาพในการทำงาน
-                </p>
-              </div>
-              <div class="script-footer">
-                <span class="use-case-label">เหมาะสำหรับ:</span> หน้า About บน LinkedIn, เรซูเม่ (Summary),
-                นำเสนอตนเองในที่ทำงาน หรือการสัมภาษณ์งาน
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 3: Personality -->
-          <div class="script-panel" id="tab-personality">
-            <div class="script-card">
-              <div class="script-card-header">
-                <div class="script-meta">
-                  <span class="meta-pill green">สะท้อนตัวตน / ทำความรู้จักตนเองเชิงลึก</span>
-                  <span class="meta-read-time">อ่าน 30 วินาที</span>
-                </div>
-                <button class="btn btn-copy copy-btn" data-target="personality-text">
-                  <svg class="copy-default" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  <svg class="copy-success" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span class="copy-label">คัดลอกข้อความ</span>
-                </button>
-              </div>
-              <div class="script-body">
-                <p id="personality-text" class="script-paragraph">
-                  ผมเป็นคนชอบคิดวิเคราะห์ ชอบตั้งคำถาม และไม่ค่อยตัดสินใจโดยไม่มีข้อมูลประกอบ ผมสนใจเรียนรู้สิ่งใหม่ ๆ
-                  และชอบหาวิธีแก้ปัญหาด้วยตัวเอง ให้ความสำคัญกับความคุ้มค่า ความรับผิดชอบ และคนในครอบครัว
-                  จุดที่พยายามพัฒนาตัวเองคือการจัดลำดับความสำคัญและตัดสินใจให้รวดเร็วขึ้นเมื่อมีข้อมูลเพียงพอ
-                </p>
-              </div>
-              <div class="script-footer">
-                <span class="use-case-label">เหมาะสำหรับ:</span> การเขียนประเมินตนเอง (Self-Assessment),
-                บทสัมภาษณ์เชิงพฤติกรรม, หรือการทำความเข้าใจตนเอง
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: AI PROFILE GENERATOR & CUSTOMIZER -->
-    <section id="ai-prompt" class="section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">5. การนำโปรไฟล์ไปประยุกต์ใช้งาน</div>
-          <h2 class="section-title">เลือกวัตถุประสงค์เพื่อปรับแต่งโปรไฟล์</h2>
-          <p class="section-desc">คุณสามารถเลือกรูปแบบเป้าหมาย เพื่อนำไปใช้งานกับ AI, การสมัครงาน หรือการแนะนำตัวส่วนตัว
-          </p>
-        </div>
-
-        <!-- Purpose Selector -->
-        <div class="purpose-grid">
-          <div class="purpose-card active" data-purpose="ai-context">
-            <div class="purpose-check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <div class="purpose-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- 4 Purpose Interactive Grid -->
+        <div class="purpose-hud-grid">
+          <div class="purpose-hud-tile active" data-export="ai-context">
+            <div class="tile-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
                 <path d="M12 12L2.1 12.5"></path>
                 <path d="M12 12l4.5 8"></path>
               </svg>
             </div>
-            <h4>ให้ AI เข้าใจตัวผม (System Prompt)</h4>
-            <p>นำเข้าเป็น Custom Instructions ใน ChatGPT, Claude, Gemini เพื่อให้ AI ตอบได้ตรงจริต</p>
+            <div class="tile-badge mono-font text-cyan">SYSTEM PROMPT</div>
+            <h4 class="tile-title">ป้อนให้ AI รู้จักตัวผม</h4>
+            <p class="tile-desc">นำเข้าเป็น Custom Instructions ใน ChatGPT/Claude ให้ AI ตอบได้ตรงจริตสายวิเคราะห์</p>
           </div>
 
-          <div class="purpose-card" data-purpose="career">
-            <div class="purpose-check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <div class="purpose-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="purpose-hud-tile" data-export="career">
+            <div class="tile-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
             </div>
-            <h4>โปรไฟล์การทำงาน / LinkedIn</h4>
-            <p>เน้นความเชี่ยวชาญด้าน Vue, .NET, SAP, การแก้ปัญหาเชิงธุรกิจ และการเป็นนักพัฒนาที่เชื่อถือได้</p>
+            <div class="tile-badge mono-font text-purple">CAREER / LINKEDIN</div>
+            <h4 class="tile-title">โปรไฟล์การทำงาน &amp; สมัครงาน</h4>
+            <p class="tile-desc">ชูจุดเด่นด้าน Vue, .NET, SAP และการออกแบบระบบแก้ปัญหาธุรกิจอย่างมืออาชีพ</p>
           </div>
 
-          <div class="purpose-card" data-purpose="growth">
-            <div class="purpose-check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <div class="purpose-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="purpose-hud-tile" data-export="growth">
+            <div class="tile-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h4>วิเคราะห์จุดแข็ง & พัฒนาตนเอง</h4>
-            <p>สรุปจุดเด่นและเครื่องเตือนใจเรื่องกฎเกณฑ์ 3 ข้อ เพื่อป้องกัน Analysis Paralysis</p>
+            <div class="tile-badge mono-font text-emerald">SELF-DEVELOPMENT</div>
+            <h4 class="tile-title">วิเคราะห์นิสัย &amp; แผนพัฒนา</h4>
+            <p class="tile-desc">สรุปจุดแข็งและแนวทางก้าวข้าม Analysis Paralysis เพื่อพัฒนาศักยภาพอย่างต่อเนื่อง</p>
           </div>
 
-          <div class="purpose-card" data-purpose="personal">
-            <div class="purpose-check">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <div class="purpose-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="purpose-hud-tile" data-export="personal">
+            <div class="tile-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <h4>ประวัติส่วนตัว & แนะนำตัว</h4>
-            <p>เนื้อหาอบอุ่น เป็นมิตร ครอบคลุมทั้งเรื่องงาน งานประดิษฐ์ DIY รถ EV และความรักในครอบครัว</p>
+            <div class="tile-badge mono-font text-amber">PERSONAL BIO</div>
+            <h4 class="tile-title">ประวัติส่วนตัว &amp; แนะนำตัว</h4>
+            <p class="tile-desc">สะท้อนตัวตนรอบด้าน ทั้งงานเทค งานประดิษฐ์ DIY รถ EV และความรักในครอบครัว</p>
           </div>
         </div>
 
-        <!-- Generated Markdown Output Display -->
-        <div class="generator-box">
-          <div class="generator-header">
-            <div class="gen-title-group">
-              <span class="gen-indicator"></span>
-              <strong id="gen-box-title">AI Persona Prompt (Markdown Ready)</strong>
+        <!-- Terminal Console Preview -->
+        <div class="terminal-export-box">
+          <div class="te-header">
+            <div class="te-title-group">
+              <span class="live-beacon"></span>
+              <span class="mono-font" id="export-header-title">AI_SYSTEM_INSTRUCTIONS.MD</span>
             </div>
-            <button class="btn btn-copy copy-btn" data-target="generated-content">
-              <svg class="copy-default" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
+            <button class="btn btn-hud-copy" id="export-copy-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
-              <svg class="copy-success" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="copy-label">คัดลอก Markdown ทั้งหมด</span>
+              <span>คัดลอก Markdown ทั้งหมด</span>
             </button>
           </div>
-          <pre class="code-preview"><code id="generated-content"></code></pre>
+          <pre class="te-body"><code id="export-code-display" class="mono-font"></code></pre>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <div class="footer-brand">MyPresent<span>.Me</span></div>
-        <p class="footer-sub">Web Profile & Persona Portfolio • ออกแบบด้วยความใส่ใจและเหตุผล</p>
+  <!-- HUD FOOTER -->
+  <footer class="hud-footer">
+    <div class="container footer-layout">
+      <div class="footer-brand-box">
+        <div class="fb-title">MYPRESENT<span>.ME</span></div>
+        <div class="fb-desc">Designed with Rational Thinking &bull; High Value &bull; Family First</div>
       </div>
-      <div class="footer-right">
-        <a href="#hero" class="back-to-top">
-          <span>กลับสู่ด้านบน</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <div class="footer-links">
+        <a href="#hero" class="btn-top-anchor">
+          <span>กลับสู่ด้านบน (Back to Top)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="12" y1="19" x2="12" y2="5"></line>
             <polyline points="5 12 12 5 19 12"></polyline>
           </svg>
@@ -835,16 +1003,12 @@
     </div>
   </footer>
 
-  <!-- Toast Notification element -->
-  <div id="toast" class="toast">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-    </svg>
+  <!-- Universal Toast Feedback -->
+  <div id="toast" class="hud-toast">
+    <div class="toast-indicator">&#10004;</div>
     <span id="toast-text">คัดลอกข้อความสำเร็จแล้ว!</span>
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
